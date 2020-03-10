@@ -1,4 +1,8 @@
-import statistics
-def quartiles(data):
-  sortedData = sorted(data)
-  mid = len(sortedData) // 2
+import numpy
+class Quartiles:
+    @staticmethod
+    def quartiles(data):
+        q1 = numpy.quantile(data,0.25)
+        q2 = numpy.quantile(data,0.5)
+        q3 = numpy.quantile(data,0.75)
+        return [q1, q2, q3]

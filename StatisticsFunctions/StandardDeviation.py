@@ -1,4 +1,6 @@
-import statistics
-def standardDeviation(data):
-    standardDeviation = statistics.stdev(data)
-    return standardDeviation
+import numpy
+
+class StandardDeviation:
+    @staticmethod
+    def StandardDeviation(data):
+        return numpy.std(data)
