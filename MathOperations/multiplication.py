@@ -1,4 +1,5 @@
-class Root:
+class Multiplication:
+
     @staticmethod
-    def root(rootstart, rootend):
-        return rootstart ** (1.0/rootend)
+    def multiply(multstart, multend):
+        return multstart * multend
