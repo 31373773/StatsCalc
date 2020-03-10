@@ -1,11 +1,11 @@
 from Statistics.Mean import mean
 from StatisticsFunctions.StandardDeviation import StandardDeviation
 from MathOperations import division
+from RandomGenerator.RandwSeed import RandomWithSeed
 
-import random
 class zScore():
     def zScore(data):
-        x = random.choice(data)
+        x = RandomWithSeed(data)
         meanData = mean(data)
         sd = StandardDeviation(data)
         numerator = x - meanData
