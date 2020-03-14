@@ -1,12 +1,5 @@
-from StatisticFunctions.StandardDeviation import StandardDeviation
-from scipy import stats
-import numpy
-
-class PopulationCorrelation():
+import scipy.stats
+class Skewness:
     @staticmethod
-
-    def popCorrelation(a, b):
-        cov = Covariance.covariance(a, b)
-        a = StandardDeviation.standardDeviation(a)
-        b = StandardDeviation.standardDeviation(b)
-        return cov/(stdDevA*stdDevB)
+    def skewness(data):
+        return scipy.stats.skew(data)

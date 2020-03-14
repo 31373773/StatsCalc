@@ -1,7 +1,11 @@
-from random import sample
-from random import shuffle
+from RandomGenerator.SelectwSeed import SelectWithSeed
 
-class RandomSampling():
-    def RandomSampling(p, num):
-        shuffle(p)
-        return sample(p, num)
+from numpy.random import seed
+
+
+class SimpleSampling(SelectWithSeed):
+    @staticmethod
+
+    def generateSampling(sd, lst, rnge):
+        seed(sd)
+        return SelectWithSeed(sd, lst, rnge)

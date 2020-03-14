@@ -1,5 +1,5 @@
 from numpy.random import seed
-from RandomGenerator.SelectWithoutSeed import SelectWithoutSeed
+from RandomGenerator.SelectNoSeed import SelectWithoutSeed
 
 class SelectWithSeed():
     @staticmethod

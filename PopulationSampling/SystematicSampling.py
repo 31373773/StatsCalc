@@ -1,11 +1,11 @@
-from RandomGenerator.RandomWithSeed import RandomWithSeed
+from RandomGenerator.RandwSeed import RandomWithSeed
+
 
 class SystematicSampling():
     @staticmethod
-
     def systematicSampling(lst, n, k):
         size = len(lst)
-        num = round((RandomWithSeed.randomInt(size, 2, size))/4)
+        num = round((RandomWithSeed.randomInt(size, 2, size)) / 4)
 
         if num == 1:
             num = 3
@@ -13,9 +13,9 @@ class SystematicSampling():
         lst2 = []
         temp = num - 1
 
-        while temp <= size-1:
+        while temp <= size - 1:
             value = lst[temp]
             lst2.append(value)
-            temp+= num
+            temp += num
 
         return lst2

@@ -30,7 +30,7 @@ class Calculator:
         return self.Result
 
     def Exponent(self, a, b):
-        self.Result = Exponentiation.exponent(a, b)
+        self.Result = Exponentiation.sqr(a, b)
         return self.Result
 
     def nthRoot(self, a, b):
@@ -40,3 +40,4 @@ class Calculator:
     def Log(self, a, b):
         self.Result = Logarithm.log(a, b)
         return self.Result
+

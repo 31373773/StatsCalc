@@ -1,13 +1,15 @@
-from Statistics.Mean import mean
+from StatisticsFunctions.Mean import Mean
 from StatisticsFunctions.StandardDeviation import StandardDeviation
-from MathOperations import division
-from RandomGenerator.RandwSeed import RandomWithSeed
+from RandomGenerator.PickSeedList import PickSeedList
+from MathOperations.division import Division
 
-class zScore():
-    def zScore(data):
-        x = RandomWithSeed(data)
-        meanData = mean(data)
-        sd = StandardDeviation(data)
-        numerator = x - meanData
-        z = division(numerator, sd)
+
+class Zscore():
+    @staticmethod
+
+    def zscore(sd, data):
+        X = PickSeedList.pickSeed(sd, data)
+        meanData = Mean.Mean(data)
+        sd = StandardDeviation.standardDeviation(data)
+        z = Division.divide(X-meanData, sd)
         return z
